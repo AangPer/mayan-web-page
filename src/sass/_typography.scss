@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif
+}
+
+.u-txt-center {
+    text-align: center;
+}
+
+.u-txt-white {
+    color: $WHITE !important;
+}
+
+// body,
+// p,
+// span {
+//     font-weight: 400;
+//     line-height: 1.7;
+//     color: $BLACK;
+//     font-size: 1.9rem;
+// }
+
+.hugeTxt {
+    font-size: 10rem;
+    position: relative;
+
+    &--dot {
+        margin-right: 4rem;
+
+        &::after {
+            content: url(../assets/svgs/dot.svg);
+            position: absolute;
+            transform-origin: center;
+            transform: translateY(-10%);
+            margin-left: 1rem;
+        }
+    }
+}
+
+.headerTitle {
+    font-size: 5.6rem;
+    font-weight: 400;
+
+    b {
+        font-weight: 700;
+    }
+}
+
+.paragraph {
+    font-size: 2rem;
+    font-weight: 500;
+
+    &--feature {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+}
+
+.linksTxt {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: $BLACK;
+
+    .btn {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: $WHITE;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    .hugeTxt {
+        font-size: 8rem;
+        position: relative;
+    }
+
+    .headerTitle {
+        font-size: 5rem;
+        font-weight: 400;
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    .hugeTxt {
+        font-size: 8rem;
+        position: relative;
+    }
+
+    .headerTitle {
+        font-size: 5rem;
+        font-weight: 400;
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) { 
+    .hugeTxt {
+        font-size: 7rem;
+    }
+    .headerTitle {
+        font-size: 4.8rem;
+        font-weight: 400;
+
+        b {
+            font-weight: 700;
+        }
+    }
+ }
+ @media (max-width: 767.98px) {
+    .hugeTxt {
+        font-size: 5rem;
+    } 
+ }
+
+ @media (max-width: 575.98px) {
+    .paragraph {
+        &--feature {
+            font-weight: 400;
+            font-size: 2rem;
+        }
+    }
+ }

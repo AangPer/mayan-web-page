@@ -1,0 +1,83 @@
+@import "../../sass/global";
+@import "../../sass/variables";
+@import "../../sass/typography";
+@import "../../sass/buttons";
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+
+    &__ctnr{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 14.6rem;
+        margin-right: 14.6rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &__logo-ctnr{
+        display: flex;
+        // background-color: red;
+        align-items: center;
+        justify-content: center;
+        height: 10.6rem;
+
+        img{
+            height: 3.0rem;
+        }
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        ul{
+            li{
+                display: inline-block;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                a{
+                    display: inline-block;
+                    color: black;
+                    text-decoration: none;
+                    position: relative;
+                    transform-origin: center;
+                    transition: all ease-in-out 0.3s;
+
+                    &:hover{
+                        font-weight: 800;
+                        
+                        &::after{
+                            transform: translate(-50%, 40%);
+                            opacity: 1;
+                        }
+                    }
+
+                    &::after{
+                        content: url(../../assets/svgs/arrow-down.svg);
+                        position: absolute;
+                        opacity: 0;
+                        top: 50%;
+                        left: 50%;
+                        transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.3s;
+                        transform: translate(-50%, -50%);
+                        z-index: -10;
+                    }
+                }
+            }
+
+            :not(:last-child){
+                margin-right: 4.2rem;
+            }
+        }
+    }
+}
